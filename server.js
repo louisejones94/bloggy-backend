@@ -23,6 +23,10 @@ const app = express()
 // Try to find an environment first, if not then go for 5000
 const port = process.env.PORT || 5004
 
+// Add middleware with the Express method '.use'
+// bodyParser middleware parses JSON requests into JavaScript objects before it reaches the route files
+app.use(express.json())
+
 // Mount the required routes (like a middleware)
 app.use(indexRouter)
 app.use(articleRouter)
