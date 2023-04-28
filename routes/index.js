@@ -4,11 +4,11 @@ const express = require('express')
 // Instantiate a router (a mini app that only handles routes)
 const router = express.Router()
 
-/*
-* Action: INDEX (show all the information)
-* Method: GET
-* URI: /
-* Description: Root route - Greet users to the app
+/**
+ * Action:          INDEX           Show all the information
+ * Method:          GET
+ * URI:             /
+ * Description:     Root route      Greet users to the app
 */
 router.get('/', (req,res) => {
     res.json({message: 'Welcome to Bloggy'})
